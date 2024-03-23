@@ -6,7 +6,14 @@
     <title>sandwich Builder</title>
 </head>
 <body id="body" >
-    <div id="sandwichBuild" style="position: absolute; left: 500px; top: 50px; height: 700px; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 350px; border: solid transparent 1px;">
+
+    <!-- <div style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
+        <div style="width: 200vw; height: 200vh; background: url(/Assets/largeBg.png) no-repeat; background-size: 200vw 200vh;">
+    
+        </div>
+    </div> -->
+
+    <div id="sandwichBuild" style="position: absolute; right: 1060px; top: 50px; height: 700px; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 350px; border: solid transparent 1px;">
         
         <!-- <img src="/Assets/Whole-Bread.png" style="width: 350px; height: 150px; position: relative; margin-left: 20px;"> -->
         <!-- <img src="/Assets/Rye-Bread.png" style="width: 300px; height: 230px; position: relative; margin-left: 20px; margin-top: -280px;">
@@ -70,7 +77,15 @@
 
 
     <h1 id="ingredientSelctedTxt" style="position: absolute; color: white; left: 20px; font-size: 25px; font-weight: 200;"></h1>
-    <img class="bg"> </img>
+    <img id="bg" style="height: 100vh; width: 100vw; background-color: #5f8880; background-image: url(/Assets/largeBg.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"> </img>
+
+
+    <div style="display: flex; justify-content: center;">
+        <div onclick="submitSandwich()" class="submitBtn" style="position: absolute; bottom: 20px; width: 250px; height: 75px; border-radius: 25px; ">
+            <h1 style="color: white; text-align: center; margin-top: 18px;">Submit</h1>
+        </div>
+    </div>
+
 </body>
 <script>
     const ingredients = {
@@ -220,7 +235,44 @@
 
     var currentIngredientHolding='';
 
-    document.body.style.zoom = '45%'
+    function resize(zoom)
+    {
+        document.body.style.zoom = 1/zoom
+    }
+    
+    const isMobile = navigator.userAgentData.mobile; //resolves true/false
+    if(isMobile)
+    {
+        document.getElementById('bg').style.display = 'none'
+        resize(2)
+    }
+
+    function submitSandwich()
+    {
+        const element = document.getElementById('sandwichBuild')
+
+        
+        html2canvas(element, {
+            onrendered: function(canvas) {
+                var imgData = canvas.toDataURL('image/png');
+
+                    // Create a link element
+                    var link = document.createElement('a');
+                    link.download = 'sandwich.png'; // Set the download attribute to specify the file name
+                    link.href = imgData; // Set the data URL as the href attribute
+
+                    // Append the link to the document body
+                    document.body.appendChild(link);
+
+                    // Trigger a click event on the link to initiate download
+                    link.click();
+
+                    // Remove the link from the document body
+                    document.body.removeChild(link);
+            }
+        });
+    }
+
 
     function placeIngredients(ingredient)
     {
@@ -266,7 +318,9 @@
         // console.log(elem)
         elem.style.opacity = 0.5
 
-        document.getElementById('ingredientSelctedTxt').innerHTML = 'ingredient selected: ' + elem.id
+        const idName = elem.id.replace('-', ' ')
+
+        document.getElementById('ingredientSelctedTxt').innerHTML = 'ingredient selected: ' + idName
     }
     function hoverLeave(elem)
     {
@@ -315,6 +369,7 @@
             ing.src = '/Assets/' + ingredient + '.png'
             ing.setAttribute('onmousedown', 'clickIngredient("'+ingredient+'")')
             ing.id = ingredient
+            ing.title = ingredient
 
             document.getElementById('ingredientsPlace').appendChild(ing)
         }
@@ -370,6 +425,10 @@
 
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+
+
 <style>
     @font-face{
         font-family: Jua1;
@@ -384,21 +443,8 @@
         font-family: "Jua1", sans-serif;
         font-weight: 100;
         font-style: normal;
-    }
 
-    
-
-    .bg{
-        height: 100vh;
-        width: 100vw;
-        
-
-        /* The image used */
-        background-color: #5f8880;
-        background-image: url(/Assets/largeBg.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-color: #55827f;
     }
     *::-webkit-scrollbar {
             width: 12px;
@@ -425,5 +471,13 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+    .submitBtn{
+        background-color: #6b9591;
+        cursor: pointer;
+    }
+    .submitBtn:hover{
+        background-color: #5f8591;
+    }
 </style>
 </html>
