@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sandwich Builder</title>
+</head>
+<body id="body" >
+    <div id="sandwichBuild" style="position: absolute; left: 500px; top: 50px; height: 700px; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 350px; border: solid transparent 1px;">
+        
+        <!-- <img src="/Assets/Whole-Bread.png" style="width: 350px; height: 150px; position: relative; margin-left: 20px;"> -->
+        <!-- <img src="/Assets/Rye-Bread.png" style="width: 300px; height: 230px; position: relative; margin-left: 20px; margin-top: -280px;">
+        <img src="/Assets/Pumpernickel-Bread.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Ham.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -250px;">
+        <img src="/Assets/Lox.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Pastrami.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Lettuce.png" style="width: 260px; height: 160px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Tomato.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Onions.png" style="width: 230px; height: 130px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Pickles.png" style="width: 220px; height: 90px; position: relative; margin-left: 20px; margin-top: -100px;">
+        <img src="/Assets/Cheddar-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -150px;">
+        <img src="/Assets/Provolone-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Swiss-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/American-cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Pepper-Jack-Cheese.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Hot-Sauce.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Mayonase.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/BBQ-sauce.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Mustard.png" style="width: 200px; height: 100px; position: relative; margin-left: 20px; margin-top: -170px;">
+        <img src="/Assets/Bacon.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -150px;">
+        <img src="/Assets/Turkey.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Salami.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Tuna.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;">
+        <img src="/Assets/Avacado.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Beef.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -180px;">
+        <img src="/Assets/Bologna.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -230px;">
+        <img src="/Assets/Jalapenos.png" style="width: 280px; height: 180px; position: relative; margin-left: 20px; margin-top: -200px;"> -->
+    </div>
+
+
+    <div id="ingredientsPlace" style="width: 250px; height: 150px; gap: 10px; background-color: #43444763; position: absolute; right: 400px; border-radius: 20px; top: 250px; border: solid white 0.5px; height: 500px; width: 500px; overflow-y: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+        <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;"> -->
+        <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
+        <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;"> -->
+    </div>
+
+
+    <h1 id="ingredientSelctedTxt" style="position: absolute; color: white; left: 20px; font-size: 25px; font-weight: 200;"></h1>
+    <img class="bg"> </img>
+</body>
+<script>
+    const ingredients = {
+    "Whole-Bread": [
+        "350px",
+        "150px"
+    ],
+    "Rye-Bread": [
+        "300px",
+        "200px"
+    ],
+    "Pumpernickel-Bread": [
+        "280px",
+        "150px"
+    ],
+    "Ham": [
+        "230px",
+        "130px"
+    ],
+    "Lox": [
+        "280px",
+        "180px"
+    ],
+    "Pastrami": [
+        "280px",
+        "180px"
+    ],
+    "Lettuce": [
+        "260px",
+        "160px"
+    ],
+    "Tomato": [
+        "280px",
+        "180px"
+    ],
+    "Onions": [
+        "230px",
+        "130px"
+    ],
+    "Pickles": [
+        "220px",
+        "90px"
+    ],
+    "Cheddar-cheese": [
+        "280px",
+        "180px"
+    ],
+    "Provolone-cheese": [
+        "280px",
+        "180px"
+    ],
+    "Swiss-cheese": [
+        "280px",
+        "180px"
+    ],
+    "American-cheese": [
+        "280px",
+        "180px"
+    ],
+    "Pepper-Jack-Cheese": [
+        "280px",
+        "180px"
+    ],
+    "Hot-Sauce": [
+        "280px",
+        "180px"
+    ],
+    "Mayonase": [
+        "280px",
+        "180px"
+    ],
+    "BBQ-sauce": [
+        "280px",
+        "180px"
+    ],
+    "Mustard": [
+        "200px",
+        "100px"
+    ],
+    "Bacon": [
+        "280px",
+        "180px"
+    ],
+    "Turkey": [
+        "280px",
+        "180px"
+    ],
+    "Salami": [
+        "280px",
+        "180px"
+    ],
+    "Tuna": [
+        "280px",
+        "180px"
+    ],
+    "Avacado": [
+        "280px",
+        "180px"
+    ],
+    "Beef": [
+        "280px",
+        "180px"
+    ],
+    "Bologna": [
+        "280px",
+        "180px"
+    ],
+    "Jalapenos": [
+        "280px",
+        "180px"
+    ]
+        
+
+    }
+
+    const indexTopMargin = [
+    "",
+    "-280px",
+    "-200px",
+    "-250px",
+    "-200px",
+    "-200px",
+    "-180px",
+    "-200px",
+    "-180px",
+    "-100px",
+    "-150px",
+    "-200px",
+    "-180px",
+    "-180px",
+    "-200px",
+    "-200px",
+    "-200px",
+    "-200px",
+    "-170px",
+    "-150px",
+    "-200px",
+    "-200px",
+    "-200px",
+    "-180px",
+    "-180px",
+    "-230px",
+    "-200px"
+]
+
+    var placedIngredients = []
+
+    var currentIngredientHolding='';
+
+
+    function placeIngredients(ingredient)
+    {
+        if(ingredient == null) {return}
+
+        const iInfo = ingredients[ingredient]
+
+        const ingredientElem = document.createElement('img')
+        ingredientElem.src = '/Assets/' + ingredient + '.png'
+        ingredientElem.style.width = iInfo[0]
+        ingredientElem.style.height = iInfo[1]
+        ingredientElem.style.position = 'absolute'
+        ingredientElem.style.marginLeft = '20px'
+        ingredientElem.style.marginBottom = (10 * (placedIngredients.length) )+ 'px'
+        ingredientElem.setAttribute('onmouseover', 'hoverElement(this)')
+        ingredientElem.setAttribute('onmouseleave', 'hoverLeave(this)')
+        ingredientElem.setAttribute('onclick', 'deleteIngredient(this)')
+        ingredientElem.id = ingredient
+        ingredientElem.name = placedIngredients.length
+        
+        placedIngredients.push(ingredient)
+        
+        document.getElementById('sandwichBuild').appendChild(ingredientElem)
+        
+
+    }
+
+    function rebuildSandwich()
+    {
+        var prevPlacedIngredients = [...placedIngredients]
+        placedIngredients = []
+        for (i in prevPlacedIngredients)
+        {
+            var ingredient = prevPlacedIngredients[i]
+            console.log(ingredient)
+            placeIngredients(ingredient)
+        }
+    }
+
+    function hoverElement(elem)
+    {
+        console.log('hoverelement')
+        // console.log(elem)
+        elem.style.opacity = 0.5
+
+        document.getElementById('ingredientSelctedTxt').innerHTML = 'ingredient selected: ' + elem.id
+    }
+    function hoverLeave(elem)
+    {
+        if(elem) {elem.style.opacity = 1}
+        document.getElementById('ingredientSelctedTxt').innerHTML = ''
+    }
+
+    function deleteIngredient(elem)
+    {
+        placedIngredients[JSON.parse(elem.name)] = null
+        elem.remove()
+
+        document.getElementById('sandwichBuild').innerHTML = ''
+        rebuildSandwich()
+        hoverLeave()
+    }
+
+    function clickIngredient(id)
+    {
+        console.log('clicked ingredient ' + id)
+
+        placeIngredients(id)
+
+        // const ing = document.createElement('img')
+        // ing.style.width = (JSON.parse(ingredients[id][0].split('px')[0]) / 2.4) + 'px'
+        // ing.style.height = (JSON.parse(ingredients[id][1].split('px')[0]) / 2.4) + 'px'
+        // ing.style.position = 'absolute'
+        // ing.src = '/Assets/' + id + '.png'
+        // ing.id = id + '1'
+        // // ing.setAttribute('onmousedown', 'pickupIngredient("'+ing.id+'")')
+
+        // document.getElementById('body').appendChild(ing)
+        
+
+        // currentIngredientHolding = id + '1'
+    }
+
+    function fillIngredients()
+    {
+        
+        for (ingredient in ingredients)
+        {
+            const ing = document.createElement('img')
+            ing.style.width = (JSON.parse(ingredients[ingredient][0].split('px')[0]) / 2.4) + 'px'
+            ing.style.height = (JSON.parse(ingredients[ingredient][1].split('px')[0]) / 2.4) + 'px'
+            ing.src = '/Assets/' + ingredient + '.png'
+            ing.setAttribute('onmousedown', 'clickIngredient("'+ingredient+'")')
+            ing.id = ingredient
+
+            document.getElementById('ingredientsPlace').appendChild(ing)
+        }
+
+
+    }
+
+    fillIngredients()
+
+    function events()
+    {
+        addEventListener('mousedown', (e) => {
+            // console.log(e.target.id)
+            // currentIngredientHolding = e.target.id
+            // if(currentIngredientHolding[currentIngredientHolding.length-1] != '1')
+            // {
+            //     currentIngredientHolding = e.target.id + '1'
+            // }
+
+
+    
+            // console.log(e.clientX)
+
+
+        })
+        // addEventListener('mouseup', () => {
+        //     currentIngredientHolding = ''
+        // })
+        // addEventListener('mousemove', (e) => {
+        //     console.log(currentIngredientHolding)
+        //     if(currentIngredientHolding != '')
+        //     {
+        //         console.log(currentIngredientHolding)
+        //         const mouseX = e.clientX
+        //         const mouseY = e.clientY
+    
+        //         console.log(mouseX + ' ' + mouseY)
+    
+        //         // console.log(currentIngredientHolding)
+        //         // console.log(document.getElementById(currentIngredientHolding))
+        //         document.getElementById(currentIngredientHolding).style.left = mouseX + 'px'
+        //         document.getElementById(currentIngredientHolding).style.top = mouseY + 'px'
+        //     }
+        // })
+    
+    
+    }
+
+    events()
+
+
+
+
+</script>
+
+<style>
+    @font-face{
+        font-family: Jua1;
+        src: url(Jua-Regular.ttf);
+    }
+
+    body{
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+
+        font-family: "Jua1", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    
+
+    .bg{
+        height: 100vh;
+        width: 100vw;
+        
+
+        /* The image used */
+        background-color: #5f8880;
+        background-image: url(/Assets/largeBg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #2b202900;
+            border-radius: 20px;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #557776;
+            border-radius: 20px;
+            border: transparent;
+        }
+
+
+    *{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+</style>
+</html>
