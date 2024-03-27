@@ -7,13 +7,13 @@
 </head>
 <body id="body" >
 
-    <!-- <div style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
-        <div style="width: 200vw; height: 200vh; background: url(/Assets/largeBg.png) no-repeat; background-size: 200vw 200vh;">
+    <div style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
+        <div style="width: 1920px; height: 1080px; background: url(/Assets/largeBg.png) no-repeat; background-size: cover">
     
         </div>
-    </div> -->
+    </div>
 
-    <div id="sandwichBuild" style="position: absolute; right: 1060px; top: 50px; height: 700px; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 350px; border: solid transparent 1px;">
+    <div id="sandwichBuild" style="position: absolute; left: 510px; top: 50px; height: 75%; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 18%; border: solid transparent 1px;">
         
         <!-- <img src="/Assets/Whole-Bread.png" style="width: 350px; height: 150px; position: relative; margin-left: 20px;"> -->
         <!-- <img src="/Assets/Rye-Bread.png" style="width: 300px; height: 230px; position: relative; margin-left: 20px; margin-top: -280px;">
@@ -45,7 +45,7 @@
     </div>
 
 
-    <div id="ingredientsPlace" style="width: 250px; height: 150px; gap: 10px; background-color: #43444763; position: absolute; right: 400px; border-radius: 20px; top: 250px; border: solid white 0.5px; height: 500px; width: 500px; overflow-y: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+    <div id="ingredientsPlace" style="width: 250px; height: 150px; gap: 10px; background-color: #43444763; position: absolute; left: 1000px; border-radius: 20px; top: 250px; border: solid white 0.5px; height: 50%; width: 26%; overflow-y: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
         <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;"> -->
         <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
         <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
@@ -76,13 +76,29 @@
     </div>
 
 
-    <h1 id="ingredientSelctedTxt" style="position: absolute; color: white; left: 20px; font-size: 25px; font-weight: 200;"></h1>
-    <img id="bg" style="height: 100vh; width: 100vw; background-color: #5f8880; background-image: url(/Assets/largeBg.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"> </img>
+    <h1 id="ingredientSelctedTxt" style="position: absolute; color: white; right: 20px; font-size: 25px; font-weight: 200;"></h1>
+    <!-- <img id="bg" style="height: 100vh; width: 100vw; background-color: #5f8880; background-image: url(/Assets/largeBg.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"> </img> -->
 
+    <h1 style="position: absolute; color: white; left: 30px; font-size: 40px; font-weight: 200; background-color: #557776;">SANDWICHBUILDER.CLUB</h1>
+    <h1 style="position: absolute; color: white; left: 30px; top: 70px; font-size: 24px; font-weight: 200;">by Dritty Pope</h1>
+    <h1 style="position: absolute; color: white; left: 30px; top: 90px; font-size: 24px; font-weight: 200;">No music on an empty stomach. Make a sammich.</h1>
 
     <div style="display: flex; justify-content: center;">
         <div onclick="submitSandwich()" class="submitBtn" style="position: absolute; bottom: 20px; width: 250px; height: 75px; border-radius: 25px; ">
             <h1 style="color: white; text-align: center; margin-top: 18px;">Submit</h1>
+        </div>
+    </div>
+
+
+    <div id="submitPage" style="display: none; justify-content: center; align-items: center; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px;">
+        <div style="position: relative; width: 850px; height: 550px; border-radius: 20px; background-color: #6da7a5; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <h1 onclick="document.getElementById('submitPage').style.display = 'none' " style="position: absolute; cursor: pointer; top: 0px; right: 25px;">X</h1>
+            <h1 style="color: white; text-align: center; font-weight: 200; font-size: 50px; margin-top: 20px;">THANK YOU!</h1>
+
+            <h1 onclick="window.open('https://drittypope.bandcamp.com/', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">MERCH</h1>
+            <h1 onclick="window.open('https://www.youtube.com/@drittypope', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">VIDEOS</h1>
+            <h1 onclick="window.open('https://open.spotify.com/artist/33yHys6DDuv2dINncFuX0F', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">SPOTIFY</h1>
+            <h1 onclick="window.open('https://music.apple.com/us/artist/dritty-pope/1164702597', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">APPLY MUSIC</h1>
         </div>
     </div>
 
@@ -249,28 +265,31 @@
 
     function submitSandwich()
     {
-        const element = document.getElementById('sandwichBuild')
+        document.getElementById('submitPage').style.display = 'flex'
+
+
+        // const element = document.getElementById('sandwichBuild')
 
         
-        html2canvas(element, {
-            onrendered: function(canvas) {
-                var imgData = canvas.toDataURL('image/png');
+        // html2canvas(element, {
+        //     onrendered: function(canvas) {
+        //         var imgData = canvas.toDataURL('image/png');
 
-                    // Create a link element
-                    var link = document.createElement('a');
-                    link.download = 'sandwich.png'; // Set the download attribute to specify the file name
-                    link.href = imgData; // Set the data URL as the href attribute
+        //             // Create a link element
+        //             var link = document.createElement('a');
+        //             link.download = 'sandwich.png'; // Set the download attribute to specify the file name
+        //             link.href = imgData; // Set the data URL as the href attribute
 
-                    // Append the link to the document body
-                    document.body.appendChild(link);
+        //             // Append the link to the document body
+        //             document.body.appendChild(link);
 
-                    // Trigger a click event on the link to initiate download
-                    link.click();
+        //             // Trigger a click event on the link to initiate download
+        //             link.click();
 
-                    // Remove the link from the document body
-                    document.body.removeChild(link);
-            }
-        });
+        //             // Remove the link from the document body
+        //             document.body.removeChild(link);
+        //     }
+        // });
     }
 
 
@@ -419,6 +438,9 @@
     }
 
     events()
+
+
+
 
 
 
