@@ -81,20 +81,20 @@
 
     <img src="/Assets/DrittyPope Logo.png" style="position: absolute; left: 20px; top: 0px; width: 150px; height: 150px;">
     <div style="display: flex; justify-content: center;">
-        <h1 style="position: absolute; color: white; text-align: center; margin-top: 40px; font-size: 40px; font-weight: 200; background-color: #557776;">SANDWICHBUILDER.CLUB</h1>
-        <h1 style="position: absolute; color: white; text-align: center; top: 80px; font-size: 24px; font-weight: 200;">by Dritty Pope</h1>
-        <h1 style="position: absolute; color: white; text-align: center; top: 105px; font-size: 24px; font-weight: 200;">No music on an empty stomach. Make a sammich.</h1>
+        <h1 style="position: absolute; color: white; text-align: center; margin-top: 40px; font-size: 40px; font-weight: 200; background-color: rgb(51, 47, 47);">SANDWICHBUILDER.CLUB</h1>
+        <h1 style="position: absolute; color: white; text-align: center; top: 80px; font-size: 24px; font-weight: 200; background-color: rgb(51, 47, 47);">by Dritty Pope</h1>
+        <h1 style="position: absolute; color: white; text-align: center; top: 105px; font-size: 24px; font-weight: 200; background-color: rgb(51, 47, 47);">No music on an empty stomach. Make a sammich.</h1>
     </div>
 
     <div style="display: flex; justify-content: center;">
-        <div onclick="submitSandwich()" class="submitBtn" style="position: absolute; bottom: 20px; width: 250px; height: 75px; border-radius: 25px; ">
+        <div id="submitBtn" onclick="submitSandwich()" class="submitBtn" style="position: absolute; bottom: 20px; width: 250px; height: 75px; border-radius: 25px; display: none;">
             <h1 style="color: white; text-align: center; margin-top: 18px;">Submit</h1>
         </div>
     </div>
 
 
-    <div id="submitPage" style="display: none; justify-content: center; align-items: center; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px;">
-        <div style="position: relative; width: 850px; height: 550px; border-radius: 20px; background-color: #6da7a5; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div id="submitPage" style="display: none; justify-content: center; align-items: center; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; ">
+        <div style="position: relative; width: 850px; height: 550px; border-radius: 20px; background-color: #6da7a5; display: flex; justify-content: center; align-items: center; flex-direction: column; border: solid black 3px;">
             <h1 onclick="document.getElementById('submitPage').style.display = 'none' " style="position: absolute; cursor: pointer; top: 0px; right: 25px;">X</h1>
             <h1 style="color: white; text-align: center; font-weight: 200; font-size: 50px; margin-top: 20px;">THANK YOU!</h1>
 
@@ -102,6 +102,8 @@
             <h1 onclick="window.open('https://www.youtube.com/@drittypope', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">VIDEOS</h1>
             <h1 onclick="window.open('https://open.spotify.com/artist/33yHys6DDuv2dINncFuX0F', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">SPOTIFY</h1>
             <h1 onclick="window.open('https://music.apple.com/us/artist/dritty-pope/1164702597', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">APPLY MUSIC</h1>
+        
+            <img src="/Assets/DrittyPope Logo.png" style="position: absolute; left: 20px; top: 10px; width: 100px; height: 100px;">
         </div>
     </div>
 
@@ -259,11 +261,13 @@
         document.body.style.zoom = 1/zoom
     }
     
-    const isMobile = navigator.userAgentData.mobile; //resolves true/false
+    var isMobile = navigator.userAgentData.mobile; //resolves true/false
     if(isMobile)
     {
         document.getElementById('bg').style.display = 'none'
         resize(3)
+
+        document.getElementById('body').setAttribute('onclick', "{document.getElementById('body').requestFullscreen(); screen.orientation.lock('landscape'); document.getElementById('body').setAttribute('onclick', '')}" )
     }
 
     function submitSandwich()
@@ -319,7 +323,10 @@
         
         document.getElementById('sandwichBuild').appendChild(ingredientElem)
         
-
+        if(placedIngredients.length == 3)
+        {
+            document.getElementById('submitBtn').style.display = 'block'
+        }
     }
 
     function rebuildSandwich()
