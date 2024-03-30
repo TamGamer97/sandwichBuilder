@@ -13,6 +13,13 @@
         </div>
     </div>
 
+    <div id="bg-mobile" style="display: none; justify-content: center; align-items: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
+        <!-- <div style="width: 100%; height: 100%; background: url(/Assets/bg.png); background-size: cover">
+    
+        </div> -->
+        <video id="sampleMovie" src="/Assets/bgMobile.mov" autoplay height="100%"  ></video>
+    </div>
+
     <div id="sandwichBuild" style="position: absolute; left: 510px; top: 50px; height: 75%; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 18%; border: solid transparent 1px;">
         
         <!-- <img src="/Assets/Whole-Bread.png" style="width: 350px; height: 150px; position: relative; margin-left: 20px;"> -->
@@ -45,7 +52,7 @@
     </div>
 
 
-    <div id="ingredientsPlace" style="width: 250px; height: 150px; gap: 10px; background-color: #43444763; position: absolute; left: 1000px; border-radius: 20px; top: 250px; border: solid white 0.5px; height: 50%; width: 26%; overflow-y: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+    <div id="ingredientsPlace" style="width: 250px; height: 150px; gap: 10px; background-color: #43444763; position: absolute; left: 1000px; border-radius: 20px; top: 250px; border: solid white 0.5px; height: 50%; width: 26%; overflow-y: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; margin-right: 0px;">
         <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;"> -->
         <!-- <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
         <img src="/Assets/American-Cheese.png" style="width: 100px; height: 100px;">
@@ -79,16 +86,16 @@
     <h1 id="ingredientSelctedTxt" style="position: absolute; color: white; right: 20px; font-size: 25px; font-weight: 200;"></h1>
     <!-- <img id="bg" style="height: 100vh; width: 100vw; background-color: #5f8880; background-image: url(/Assets/largeBg.png); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"> </img> -->
 
-    <img src="/Assets/DrittyPope Logo.png" style="position: absolute; left: 20px; top: 0px; width: 150px; height: 150px;">
+    <img src="/Assets/DrittyPope LogoDiamond.png" style="position: absolute; left: 20px; top: 20px; width: 150px; height: 150px;">
     <div style="display: flex; justify-content: center;">
-        <h1 style="position: absolute; color: white; text-align: center; margin-top: 40px; font-size: 40px; font-weight: 200; background-color: rgb(51, 47, 47);">SANDWICHBUILDER.CLUB</h1>
-        <h1 style="position: absolute; color: white; text-align: center; top: 80px; font-size: 24px; font-weight: 200; background-color: rgb(51, 47, 47);">by Dritty Pope</h1>
-        <h1 style="position: absolute; color: white; text-align: center; top: 105px; font-size: 24px; font-weight: 200; background-color: rgb(51, 47, 47);">No music on an empty stomach. Make a sammich.</h1>
+        <h1 style="position: absolute; color: white; text-align: center; margin-top: 40px; font-size: 50px; font-weight: 200; background-color: rgb(51, 47, 47);">SANDWICHBUILDER.CLUB</h1>
+        <h1 style="position: absolute; color: white; text-align: center; top: 80px; font-size: 30px; font-weight: 200; background-color: rgb(51, 47, 47);">by Dritty Pope</h1>
+        <h1 style="position: absolute; color: white; text-align: center; top: 125px; font-size: 30px; font-weight: 200; background-color: rgb(51, 47, 47);">No music on an empty stomach. Make a sammich.</h1>
     </div>
 
     <div style="display: flex; justify-content: center;">
         <div id="submitBtn" onclick="submitSandwich()" class="submitBtn" style="position: absolute; bottom: 20px; width: 250px; height: 75px; border-radius: 25px; display: none;">
-            <h1 style="color: white; text-align: center; margin-top: 18px;">Submit</h1>
+            <h1 style="color: white; text-align: center; margin-top: 13px; font-size: 40px;">Submit</h1>
         </div>
     </div>
 
@@ -96,12 +103,12 @@
     <div id="submitPage" style="display: none; justify-content: center; align-items: center; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; ">
         <div style="position: relative; width: 850px; height: 550px; border-radius: 20px; background-color: #6da7a5; display: flex; justify-content: center; align-items: center; flex-direction: column; border: solid black 3px;">
             <h1 onclick="document.getElementById('submitPage').style.display = 'none' " style="position: absolute; cursor: pointer; top: 0px; right: 25px;">X</h1>
-            <h1 style="color: white; text-align: center; font-weight: 200; font-size: 50px; margin-top: 20px;">THANK YOU!</h1>
+            <h1 style="color: white; text-align: center; font-weight: 200; font-size: 60px; margin-top: 20px;">THANK YOU!</h1>
 
-            <h1 onclick="window.open('https://drittypope.bandcamp.com/', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">MERCH</h1>
-            <h1 onclick="window.open('https://www.youtube.com/@drittypope', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">VIDEOS</h1>
-            <h1 onclick="window.open('https://open.spotify.com/artist/33yHys6DDuv2dINncFuX0F', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">SPOTIFY</h1>
-            <h1 onclick="window.open('https://music.apple.com/us/artist/dritty-pope/1164702597', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 25px; width: 80%; margin-top: 0px;">APPLY MUSIC</h1>
+            <h1 onclick="window.open('https://drittypope.bandcamp.com/', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 35px; width: 80%; margin-top: 0px;">MERCH</h1>
+            <h1 onclick="window.open('https://www.youtube.com/@drittypope', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 35px; width: 80%; margin-top: 0px;">VIDEOS</h1>
+            <h1 onclick="window.open('https://open.spotify.com/artist/33yHys6DDuv2dINncFuX0F', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 35px; width: 80%; margin-top: 0px;">SPOTIFY</h1>
+            <h1 onclick="window.open('https://music.apple.com/us/artist/dritty-pope/1164702597', '_blank').focus();" style="color: rgb(152, 231, 255); text-decoration-line: underline; cursor: pointer; text-align: center; font-weight: 200; font-size: 35px; width: 80%; margin-top: 0px;">APPLY MUSIC</h1>
         
             <img src="/Assets/DrittyPope Logo.png" style="position: absolute; left: 20px; top: 10px; width: 100px; height: 100px;">
         </div>
@@ -276,12 +283,21 @@
         resize(3)
 
         document.getElementById('body').setAttribute('onclick', "{document.getElementById('body').requestFullscreen(); screen.orientation.lock('landscape'); document.getElementById('body').setAttribute('onclick', '')}" )
+    
+        document.getElementById('ingredientsPlace').style.marginRight = '30px'
+
+        document.getElementById('bg-mobile').style.display = 'flex'
     }
 
     function submitSandwich()
     {
         document.getElementById('submitPage').style.display = 'flex'
 
+        // Create an Audio object
+        var audio = new Audio('/assets/btnClick.mp3');
+
+        // Play the audio
+        audio.play();
 
         // const element = document.getElementById('sandwichBuild')
 
@@ -307,10 +323,21 @@
         // });
     }
 
+    function randomWholeNumber(start, end) {
+    return Math.floor(Math.random() * (end - start + 1)) + start;
+}
 
     function placeIngredients(ingredient)
     {
         if(ingredient == null) {return}
+
+        var soundEffect = randomWholeNumber(0,4)
+        soundEffect = './assets/' + soundEffect + '.mp3'
+
+        // Create an Audio object
+        var audio = new Audio(soundEffect);
+        // Play the audio
+        audio.play();
 
         const iInfo = ingredients[ingredient]
 
@@ -472,7 +499,7 @@
 <style>
     @font-face{
         font-family: Jua1;
-        src: url(Jua-Regular.ttf);
+        src: url(LemonMilk.otf);
     }
 
     body{
