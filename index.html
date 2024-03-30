@@ -14,10 +14,9 @@
     </div>
 
     <div id="bg-mobile" style="display: none; justify-content: center; align-items: center; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; ">
-        <!-- <div style="width: 100%; height: 100%; background: url(/Assets/bg.png); background-size: cover">
+        <div style="width: 100%; height: 100%; background: url(/Assets/mobileBg.png); background-size: cover">
     
-        </div> -->
-        <video id="sampleMovie" src="/Assets/bgMobile.mov" autoplay height="100%"  ></video>
+        </div>
     </div>
 
     <div id="sandwichBuild" style="position: absolute; left: 510px; top: 50px; height: 75%; display: flex; justify-content: end; flex-direction: column-reverse; align-items: center; width: 18%; border: solid transparent 1px;">
@@ -95,7 +94,7 @@
 
     <div style="display: flex; justify-content: center;">
         <div id="submitBtn" onclick="submitSandwich()" class="submitBtn" style="position: absolute; bottom: 20px; width: 250px; height: 75px; border-radius: 25px; display: none;">
-            <h1 style="color: white; text-align: center; margin-top: 13px; font-size: 40px;">Submit</h1>
+            <h1 id="submitTxt" style="color: white; text-align: center; margin-top: 13px; font-size: 40px;">Submit</h1>
         </div>
     </div>
 
@@ -287,6 +286,13 @@
         document.getElementById('ingredientsPlace').style.marginRight = '30px'
 
         document.getElementById('bg-mobile').style.display = 'flex'
+
+        document.getElementById('submitBtn').style.width = '800px'
+        document.getElementById('submitBtn').style.height = '220px'
+        document.getElementById('submitBtn').style.marginBottom = '50px'
+        document.getElementById('submitTxt').style.fontSize = '100px'
+        document.getElementById('submitTxt').style.marginTop = '30px'
+
     }
 
     function submitSandwich()
